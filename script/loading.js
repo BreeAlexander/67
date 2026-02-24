@@ -1,9 +1,15 @@
 loadtext = document.querySelector('.loading.text')
 bg = document.querySelector('bg")
 
+load = 0
 
-loadText.innertext = "1%"
-loadText.style.opacity = "1"
-bg.style.filter= "blure(0)"
+int = setInterval(blurring, 30)
+
+function blurring() {
+    load = load + 1
+    loadText.innertext = `${load}%`;
+    loadText.style.opacity = 1-load/100
+    bg.style.filter= `blur($(50-load/2)p
+}
 
 
