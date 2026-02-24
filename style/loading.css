@@ -23,4 +23,5 @@ body {
     background-repeat: no-repeat;
     bachground-size: cover;
     bckground-positiion: center;
+    z-index: -1;
 }
