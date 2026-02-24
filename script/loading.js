@@ -9,7 +9,11 @@ function blurring() {
     load = load + 1
     loadText.innertext = `${load}%`;
     loadText.style.opacity = 1-load/100
-    bg.style.filter= `blur($(50-load/2)p
+    bg.style.filter= `blur($(50-load/2)px`
+
+    if (load > 99) {
+        clear Interval(int)
+    }
 }
 
 
