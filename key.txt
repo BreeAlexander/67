@@ -1,1 +1,8 @@
 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKYA8vyQ2D1h1FG2HhfaoGTQjlN6roXycNIYcUYFVDzu ubuntu@codespaces-1aa37c
+password: 1010
+
+to save my work...
+
+get add .
+get commit -m "some message"
+get push
