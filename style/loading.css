@@ -20,4 +20,7 @@ body {
     height: 100vh;
     background-image: url('photo.avif');
     position: absolute;
+    background-repeat: no-repeat;
+    bachground-size: cover;
+    bckground-positiion: center;
 }
