@@ -11,7 +11,12 @@ body {
     margin: 0;
 }
 
-.loading-text (
+.loading-text {
     font-size: 50px;
+}
 
-)
+.bg {
+    width: 100vw;
+    height: 100vh;
+    background-image: url()
+}
