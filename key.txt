@@ -3,6 +3,6 @@ password: 1010
 
 to save my work...
 
-get add .
-get commit -m "some message"
-get push
+git add .
+git commit -m "some message"
+git push
