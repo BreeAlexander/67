@@ -23,5 +23,5 @@ body {
     border-radius: 50px;
     color: white;
     cursor: pointer;
-    display: flex;
+    flex: 1;
 }
