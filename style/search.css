@@ -4,7 +4,7 @@
 }
 
 body {
-    background: linear-gradient(90deg, rgb(230, 0, 255), rgb(231, 33, 252));
+    background: greenyellow;
     display: flex;
     align-items: center;
     height: 100vh;
@@ -15,38 +15,42 @@ body {
 .search {
     position: relative;
     height: 50px;
+    width: 50px;
+    background-color: blue;
+    position: relative;
 }
 
-.input {
-    background: white;
-    border: 0;
-    font-size: 18px:
-    padding: 15px;
-    height: 15px;
-    width: 50px;
-    transition: width 1s ease;
-}
 
-.btn {
-    background: white;
-    border: 0;
-    cursor: pointer;
-    font-size: 24px;
-    height: 50px;
-    width: 50px;
+.search .btn {
     position: absolute;
     top: 0;
     left: 0;
+    font-size: 24px;
+    background-color: white;
+    border: 0;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
     transition: transform 1s ease;
     }
 
-    .input:focus {
+.search .input {
+    background-color: white;
+    border: 0;
+    font-size: 18px:
+    height: 50px;
+    width: 50px;
+    padding: 15px;
+    transition: width 1s ease;
+}
+
+.search .input:focus {
         outline: none;
     }
-    .search.active .btn {
+.search.active .imput {
         width: 200px;
     }
 
-    .search.active .btn {
+.search.active .btn {
         transform: translateX(198px);
     }
