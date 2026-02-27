@@ -24,4 +24,6 @@ body {
     color: white;
     cursor: pointer;
     flex: 1;
+    margin: 5px;
+    position: relative;
 }
