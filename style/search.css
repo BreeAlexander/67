@@ -37,7 +37,7 @@ body {
 .search .input {
     background-color: white;
     border: 0;
-    font-size: 18px:
+    font-size: 18px;
     height: 50px;
     width: 50px;
     padding: 15px;
@@ -47,7 +47,7 @@ body {
 .search .input:focus {
         outline: none;
     }
-.search.active .imput {
+.search.active .input {
         width: 200px;
     }
 
