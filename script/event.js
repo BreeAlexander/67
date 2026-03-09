@@ -1,7 +1,7 @@
 clickbox = document.querySelector('.click')
 spinbox = document.querySelector('.spin')
 movebox = document.querySelector('.move')
-hoverbox = document.querySelector('.hover')
+hoverBox = document.querySelector('.hover')
 dblclickbox = document.querySelector('.dblclick')
 
 
@@ -44,7 +44,5 @@ hoverBox.addEventListener('mouseleave', () => {
 
 
 
-dblClickBox.addEventListener('mouseclick', () => {
-    hoverBox.style.height = "200px"
-    hoverBox.style.width = "300px"
+dblclickbox.addEventListener('mouseclick', () => {
 })
