@@ -24,7 +24,7 @@ spinbox.addEventListener('click', () => {
 x = 0
 y = 0
 
-dcument.addEventListener('keydown', (event) => {
+document.addEventListener('keydown', (event) => {
     if (event.key == 'ArrowRight') {x = x + 10}
     if (event.key == 'ArrowUp') {y = y - 10}
     if (event.key == 'ArrowLeft') {x = x - 10}
