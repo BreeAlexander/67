@@ -63,3 +63,8 @@ body {
     }
 }
 
+.active {
+    background: white;
+    font-size: 0px;
+}
+
