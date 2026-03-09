@@ -20,3 +20,31 @@ clickbox.addEventListener('click', () => {
 spinbox.addEventListener('click', () => {
     spinbox.classList.toggle('start')
 })
+
+x = 0
+y = 0
+
+dcument.addEventListener('keydown', (event) => {
+    if (event.key == 'ArrowRight') {x = x + 10}
+    if (event.key == 'ArrowUp') {y = y - 10}
+    if (event.key == 'ArrowLeft') {x = x - 10}
+    if (event.key == 'ArrowDown') {y = y + 10}
+    moveBox.style.transform = 'translate(${x}px, ${y}px)'
+})
+
+hoverBox.addEventListener('mouseenter', () => {
+    hoverBox.style.height = "200px"
+    hoverBox.style.width = "300px"
+})
+
+hoverBox.addEventListener('mouseleave', () => {
+    hoverBox.style.height = "60px"
+    hoverBox.style.width = "250px"
+})
+
+
+
+dblClickBox.addEventListener('mouseclick', () => {
+    hoverBox.style.height = "200px"
+    hoverBox.style.width = "300px"
+})
