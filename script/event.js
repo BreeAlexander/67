@@ -29,7 +29,7 @@ document.addEventListener('keydown', (event) => {
     if (event.key == 'ArrowUp') {y = y - 10}
     if (event.key == 'ArrowLeft') {x = x - 10}
     if (event.key == 'ArrowDown') {y = y + 10}
-    movebox.style.transform = 'translate(${x}px, ${y}px)'
+    movebox.style.transform = `translate(${x}px, ${y}px)`
 })
 
 hoverBox.addEventListener('mouseenter', () => {
