@@ -45,5 +45,6 @@ hoverBox.addEventListener('mouseleave', () => {
 
 
 dblclickbox.addEventListener('mouseclick', () => {
+    dblclickbox.classList.toggle('disappear')
 
 })
