@@ -11,9 +11,8 @@ body {
 }
 
 .sixseven {
-    height: 80vh;
+    height: 40vh;
     border-radius: 50px;
-    color: black;
     background-color: black;
     cursor: pointer;
     flex: 0.5;
@@ -23,4 +22,12 @@ body {
     width: 90vw;
 }
 
+.sixseven h3 {
+    color: white;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    display: flex;
 
+
+}
