@@ -15,11 +15,10 @@ body {
     border-radius: 50px;
     background-color: black;
     cursor: pointer;
-    flex: 0.5;
     margin: 10px;
     position: relative;
     display: flex;
-    width: 90vw;
+    width: 45vw;
 }
 
 .sixseven h3 {
@@ -28,6 +27,9 @@ body {
     align-items: center;
     position: relative;
     display: flex;
+}
 
+.active {
+    background-color: white;
 
 }
