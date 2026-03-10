@@ -3,7 +3,6 @@
 }
 
 body {
-    background: black;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -12,12 +11,10 @@ body {
 }
 
 .sixseven {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
     height: 80vh;
     border-radius: 50px;
-    color: white;
+    color: black;
+    background-color: black;
     cursor: pointer;
     flex: 0.5;
     margin: 10px;
