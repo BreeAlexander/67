@@ -17,8 +17,8 @@ body {
 
 .btn {
     font-family: "Raleway", sans-serif;
-    background: cadetBlue;
-    color: white;
+    background: OldLace;
+    color: black;
     margin: 1rem;
     padding: 1.5rem 3rem;
     font-size: 1.2rem;
@@ -28,5 +28,5 @@ body {
 }
 
 .btn:hover {
-    opacity: 0.9;
+    opacity: 0.8;
 }
