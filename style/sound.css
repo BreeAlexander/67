@@ -10,5 +10,10 @@ body {
     margin: 0;
 }
 
-
+.btn {
+    background: cadetBlue;
+    color: white;
+    margin: 1rem;
+    
+}
 
