@@ -6,6 +6,7 @@
 }
 
 body {
+    font-family: "Raleway", sans-serif;
     background: LightSteelBlue;
     height: 100vh;
     display: flex;
@@ -15,6 +16,7 @@ body {
 }
 
 .btn {
+    font-family: "Raleway", sans-serif;
     background: cadetBlue;
     color: white;
     margin: 1rem;
