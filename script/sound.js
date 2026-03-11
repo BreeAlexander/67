@@ -1,0 +1,1 @@
+buttons = document.querySelector('.buttons')
