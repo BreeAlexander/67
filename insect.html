@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insect Game</title>
+    <link rel="stylesheet" href="style/insect.css">
+</head>
+<body>
+    <div class="screen ">
+        <h1>Catch The Insect</h1>
+        <button class="btn" id="start-btn">Play Game</button>
+    </div>
+
+
+    <div class="screen">
+        <h1>What is your favorite insect?</h1>
+        <ul class="insects-list">
+            <li>
+                <button class="choose-insect-btn">
+                    <p>dragonfly</p>
+                    <img src="images/dragonfly.jfif" alt="dragonfly">
+                </button>
+                <button class="choose-insect-btn">
+                    <p>praying mantis</p>
+                    <img src="images/preying.mantis.jfif" alt="mantis">
+                </button>
+                <button class="choose-insect-btn">
+                    <p>jumping spider</p>
+                    <img src="images/spider.jfif" alt="spider">
+                </button>
+                <button class="choose-insect-btn">
+                    <p>ladybug</p>
+                    <img src="images/ladybug.jfif" alt="ladybug">
+                </button>
+            </li>
+        </ul>
+    </div>
+
+    <div class="screen game-container" id="game-container">
+        <h3 id="time" class="time">Time: 00:00</h3>
+        <h3 id="score" class="score">score: 0</h3>
+        <h5 id="message" class="message">
+            Are you annoyed yet? <br>
+            You are pplaying an impossible game!!
+        </h5>
+    </div>
+    <script src="script/insect.js"></script>
+</body>
+</html>
