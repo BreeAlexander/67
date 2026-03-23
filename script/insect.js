@@ -25,7 +25,7 @@ for (let i = 0; i < choose_insect_btns.length; i = i + 1)
 
 function startGame() {
     setTimeout(createInsect, 1000)
-    setInterval()
+    setInterval(increaseTime, 1000)
 }
 
 function createInsect() {
@@ -62,5 +62,6 @@ function increaseScore() {
 
 function increaseTime() {
     seconds = seconds + 1
-    timeEl.innerHTML = `Time: ${seconds}`
+    m = seconds /60
+    timeEl.innerHTML = `Time: ${m}:${seconds}`
 }
