@@ -27,6 +27,16 @@ function startGame() {
 function createInsect() {
     insect = document.createElement('div')
     insect.classList.add('insect')
-    insect.innerHtml = `<img src="images/ladybug.jfif" alt="ladybug">`
+    const {x,y} = getRandomLocation()
+    insect.innerHtml = `<img src="${src}" alt="${alt}" style="transform: (${Math.random()*360}deg)">`
     game_contanier.appendChild(insect)
+}
+
+
+function getRandomLocation() {
+    width = window.innerWidth
+    height = window.innerHeight
+    x = Math.random()*(width-200) + 100
+    y = Math.random()*(height-200) + 100
+    return {x, y}
 }
