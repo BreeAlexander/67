@@ -5,6 +5,7 @@ game_container = document.querySelector('.game-container')
 scoreEl = document.getElementById('score')
 timeEl = document.getElementById('time')
 messageEl = document.getElementById('message')
+console.log(messageEl)
 score = 0
 seconds = 0
 
@@ -69,7 +70,7 @@ function increaseScore() {
     score = score + 1
     scoreEl.innerHTML = `Score: ${score}`
     if (score == 20){
-        messageEl.classlist.add('visible')
+        messageEl.classList.add('visible')
     }
 }
 
