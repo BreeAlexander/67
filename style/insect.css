@@ -103,15 +103,20 @@ h1 {
 .message {
     line-height: 1.7;
     background: #000000;
+    color: white;
     width: 100%;
     padding: 20px;
     z-index: 100;
     text-align: center;
     opacity: 0;
+    transform: scale(0)
+
 }
 
 .message.visible {
     opacity: 1;
+    transform: scale(1)
+
 }
 
 .insect {
