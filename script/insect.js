@@ -48,6 +48,7 @@ function getRandomLocation() {
     height = window.innerHeight
     x = Math.random()*(width - 200) + 100
     y = Math.random()*(height - 200) + 100
+    console.log(x,y)
     return {x, y}
 }
 
