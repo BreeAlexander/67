@@ -22,7 +22,7 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    transition: margin .5 ease-out;
+    transition: margin 0.5 ease-out;
 }
 
 .screen.up {
