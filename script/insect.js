@@ -5,7 +5,6 @@ game_container = document.querySelector('.game-container')
 scoreEl = document.getElementById('score')
 timeEl = document.getElementById('time')
 messageEl = document.getElementById('message')
-console.log(messageEl)
 score = 0
 seconds = 0
 
