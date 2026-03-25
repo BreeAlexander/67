@@ -1,4 +1,4 @@
-nav = document.querySelector('.nav')
+nav = document.querySelector('.titles')
 
 window.addEventListener('scroll', () => {
     if(scrollY > 520) {
