@@ -24,3 +24,11 @@ body {
     height: 20vh;
     text-align: row;
 }
+
+.titles ul {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    list-style-type: none;
+    margin: 2px;
+}
