@@ -6,10 +6,14 @@ body {
     background: navy;
     color: white;
 }
-.hero.p {
+.hero p {
     align-items: center;
     justify-content: center;
     align-items: center;
     text-align: center;
-    
+    letter-spacing: 1px;
+    font size: 20px;
+    color: black;
+
+
 }
