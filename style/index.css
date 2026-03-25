@@ -5,6 +5,8 @@
 body {
     background: PowderBlue;
     color: white;
+    margin: 5 0 10;
+    overflow-x: hidden;
 }
 .content p {
     align-items: center;
@@ -30,7 +32,7 @@ body {
     align-items: center;
     justify-content: right;
     list-style-type: none;
-    margin: 2px;
+    padding: 10px;
 }
 
 h2 {
