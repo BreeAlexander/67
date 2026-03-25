@@ -3,7 +3,7 @@
 }
 
 body {
-    background: ;
+    background: PowderBlue;
     color: white;
 }
 .content p {
@@ -12,6 +12,12 @@ body {
     align-items: center;
     text-align: center;
     letter-spacing: 1px;
-    font size: 20px;
+    font size: 30px;
+    color: SeaShell;
     background: lightblue;
+}
+
+.titles {
+    background: SeaShell:
+    
 }
