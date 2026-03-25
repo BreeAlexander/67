@@ -13,11 +13,14 @@ body {
     text-align: center;
     letter-spacing: 1px;
     font size: 30px;
-    color: SeaShell;
+    color: SlateGrey;
     background: lightblue;
 }
 
 .titles {
-    background: SeaShell:
+    background: SeaShell;
+    color: SlateGrey;
     width: 100vw;
+    height: 20vh;
+    text-align: row;
 }
