@@ -26,16 +26,21 @@ body {
     height: 20vh;
 }
 
-.titles ul {
+.link {
     display: flex;
-    align-items: center;
-    justify-content: right;
+    position: absolute;
+    top: 120px;
+    right: 40px;
+    color: black;
     list-style-type: none;
-    padding: 10px;
+    // justify-content: space-around;
 }
 
-.container a {
-    padding: 20;
+.content a {
+    color: black;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
 }
 
 h2 {
