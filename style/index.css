@@ -165,6 +165,9 @@ body {
 
 body.light {
     background: rgb(100, 100, 100);
+    font-family: "Quintessential", serif;
+    font-weight: 400;
+    font-style: normal;
     overflow: hidden;
     color: #999999;
     overflow-x: hidden;
