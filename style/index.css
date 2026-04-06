@@ -109,7 +109,7 @@ body {
 
 .content p {
     color: #111111;
-    line-height: 30px;
+    line-height: 40px;
     letter-spacing: 1.2px;
 }
 
@@ -137,7 +137,7 @@ body {
 
 
 
-/* below this is all of the light mode stuff */
+
 
 
 
@@ -196,14 +196,14 @@ body.light {
 
 
 .content.light a:hover {
-    opacity: .6;
+    opacity: .5;
     color: black;
 }
 
 
 .content.light p {
     color: #777777;
-    line-height: 30px;
+    line-height: 40px;
     letter-spacing: 1.2px;
 }
 
