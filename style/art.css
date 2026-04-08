@@ -1,3 +1,31 @@
 * {
     box-sizing: border-box;
 }
+
+body {
+    background: #AFEEEE;
+    overflow: hidden;
+}
+
+.bg2 {
+    background-color: #98FB98;
+    position: absolute;
+    left: -25%;
+    bottom: -25%;
+    height: 50%;
+    width: 100%;
+    z-index: -5;
+    border-radius: 50%;
+}
+
+.bg3 {
+    background-color: #98FB98;
+    position: absolute;
+    right: -60%;
+    bottom: -25%;
+    height: 50%;
+    width: 100%;
+    z-index: -4;
+    border-radius: 50%;
+}
+
