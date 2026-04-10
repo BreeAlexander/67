@@ -43,7 +43,7 @@ body {
     background: #DEB887;
     height: 133px;
     width: 170px;
-    z-index: ;
+    z-index: -1;
     right: -200px;
     bottom: -67px;
 }
@@ -52,6 +52,17 @@ body {
     background: black;
     position: relative;
     height: 10px;
-    width: 370px;
+    width: 420px;
+    z-index: 2;
+    left: -25px;
+    bottom: 75px;
+}
+
+.smallroof1 {
+    background: red;
+    position: relative;
+    width: 100px;
+    height: 10px;
+    bottom: 67px;
 }
 
