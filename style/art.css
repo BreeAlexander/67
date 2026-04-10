@@ -30,6 +30,11 @@ body {
 }
 
 .house {
-    background: 
+    background: #DEB887;
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    left: 150px;
+    bottom: 125px;
 }
 
