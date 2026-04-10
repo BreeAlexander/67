@@ -72,6 +72,8 @@ body {
 
 .window1 {
     position: relative;
+    display: flex;
+    left: 50%;
     height: 50px;
     width: 50px;
     z-index: 2;
