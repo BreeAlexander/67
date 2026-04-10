@@ -61,8 +61,11 @@ body {
 .smallroof1 {
     background: red;
     position: relative;
-    width: 100px;
-    height: 10px;
+    width: 0px;
+    height: 0px;
     bottom: 67px;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px;
 }
 
