@@ -59,13 +59,13 @@ body {
 }
 
 .smallroof1 {
-    background: red;
     position: relative;
-    width: 0px;
-    height: 0px;
+    z-index: 2;
+    width: 0;
+    height: 0;
     bottom: 67px;
     border-left: 50px solid transparent;
     border-right: 50px solid transparent;
-    border-bottom: 100px;
+    border-bottom: 100px black;
 }
 
