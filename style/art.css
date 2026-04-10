@@ -59,15 +59,22 @@ body {
 }
 
 .smallroof1 {
-    background
     position: relative;
     z-index: 2;
-    bottom: 67px;
+    bottom: 107px;
     width: 0;
     height: 0;
     border-width: 0 125px 50px 125px;
-    border-color: transparent transparent #FF0000 transparent;
+    border-color: transparent transparent #000000 transparent;
     border-style: solid;
     display: inline-block;
+}
+
+.window1 {
+    position: relative;
+    height: 50px;
+    width: 50px;
+    z-index: 2;
+    background: white;
 }
 
