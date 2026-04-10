@@ -38,3 +38,20 @@ body {
     bottom: 125px;
 }
 
+.house2 {
+    position: relative;
+    background: #DEB887;
+    height: 133px;
+    width: 170px;
+    z-index: ;
+    right: -200px;
+    bottom: -67px;
+}
+
+.roof {
+    background: black;
+    position: relative;
+    height: 10px;
+    width: 370px;
+}
+
