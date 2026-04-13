@@ -3,12 +3,14 @@ const ballRadius = 30
 const windowHeight = window.innerHeight
 const windowWidth = window.innerWidth
 let ballXPosition = windowWidth/2 - ballRadius
+let ballSpeed = 5
 
 setInterval(moveBall, 10)
 
 function moveBall(){
-    ballXPosition = ballXPosition + 5
-    ball.style.left = `{ballXPosition}px`
+    ballXPosition = ballXPosition + ballSpeed
+    ball.style.left = `${ballXPosition}px`
+    if (ballXPosition
 }
 
 
@@ -22,5 +24,5 @@ function createBall(){
     ball.style.backgroundColor = "black"
     ball.style.position = "absolute"
     ball.style.top = `${windowHeight/2 - ballRadius}px`
-    ball.style.left = `${windowWidth/2 - ballRadius}px`
+    ball.style.left = `${ballXPosition}px`
 }
