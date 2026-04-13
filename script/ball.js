@@ -11,6 +11,7 @@ const windowWidth = window.innerWidth
 let ballXPosition = windowWidth/2 - ballRadius
 let ballYPosition = windowHeight/2 - ballRadius
 let ballSpeed = 5
+let padelSpeed = 2
 let ballXDirection = 1
 let ballYDirection = 1
 
