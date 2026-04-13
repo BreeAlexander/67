@@ -58,10 +58,20 @@ function createLpadel() {
 
 document.addEventListener('keyup', (event) => {
     if (event.key == 'w') {
-        LpadelYPosition = LpadelYPosition - LpadelSpeed
+        if (LpadelYPosition < 0) {
+            LpadelYPosition = 0
+        }
+        else {
+            LpadelYPosition = LpadelYPosition - LpadelSpeed
+        }
     }
     if (event.key == 's') {
-        LpadelYPosition = LpadelYPosition + LpadelSpeed
+        if (LpadelYPosition >= windowHeight - LpadelHeight) {
+            LpadelYPosition = windowHeight - LpadelHeight
+        }
+        else {
+            LpadelYPosition = LpadelYPosition + LpadelSpeed
+        }
     }
     Lpadel.style.top = `${LpadelYPosition}px`
 })
