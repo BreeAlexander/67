@@ -1,5 +1,6 @@
 const ball = document.createElement('div')
 
+
 function createBall(){
     document.body.appendChild(ball)
     ball.style.height = "100px"
