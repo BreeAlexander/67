@@ -32,7 +32,6 @@ function moveBall(){
     }
 }
 
-
 createBall()
 
 function createBall(){
