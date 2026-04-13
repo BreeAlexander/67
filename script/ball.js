@@ -33,6 +33,6 @@ function createBall(){
     ball.style.borderRadius = "50%"
     ball.style.backgroundColor = "black"
     ball.style.position = "absolute"
-    ball.style.top = `${ballYPosiotion}px`
+    ball.style.top = `${ballYPosition}px`
     ball.style.left = `${ballXPosition}px`
 }
