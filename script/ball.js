@@ -32,7 +32,7 @@ function moveBall(){
         ballXDirection = ballXDirection * -1
     }
     let ballTop = ballYPosition
-    let ballBottom = ballYposition + 2 * ballRadius
+    let ballBottom = ballYPosition + 2 * ballRadius
     let ballLeft = ballXPosition
     let LpadelTop = LpadelYPosition
     let LpadelBottom = LpadelYPosition + LpadelHeight
