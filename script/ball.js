@@ -56,7 +56,7 @@ function createLpadel() {
 
 document.addEventListener('keyup', (event) => {
     if (event.key == 'w') {
-        //move up
+        LpadelYPosition = LpadelYPosition - LpadelYPosition
     }
     if (event.key == 's') {
         //move down
