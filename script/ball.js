@@ -1,15 +1,16 @@
 const ball = document.createElement('div')
 document.body.appendChild(ball)
-const LPadel = document.createElement('div')
-document.body.appendChild(LPadel)
+const Lpadel = document.createElement('div')
+document.body.appendChild(Lpadel)
 let LpadelWidth = 20
 let LpadelHeight = 100
+const windowHeight = window.innerHeight
+const windowWidth = window.innerWidth
+
 let LpadelSpeed = 2
 let LpadelYPosition = windowHeight / 2 - LpadelHeight / 2
 
 const ballRadius = 30
-const windowHeight = window.innerHeight
-const windowWidth = window.innerWidth
 let ballXPosition = windowWidth/2 - ballRadius
 let ballYPosition = windowHeight/2 - ballRadius
 let ballSpeed = 5
@@ -47,12 +48,12 @@ function createBall(){
 
 createLpadel()
 function createLpadel() {
-    LPadel.style.height = `${LpadelHeight}px`
-    LPadel.style.width = `${LpadelWidth}px`
-    LPadel.style.backgroundColor = 'blue'
-    LPadel.style.position = 'absolute'
-    LPadel.style.left = "50px"
-    LPadel.style.top = `${LpadelYPosition}px`
+    Lpadel.style.height = `${LpadelHeight}px`
+    Lpadel.style.width = `${LpadelWidth}px`
+    Lpadel.style.backgroundColor = 'blue'
+    Lpadel.style.position = 'absolute'
+    Lpadel.style.left = "50px"
+    Lpadel.style.top = `${LpadelYPosition}px`
 }
 
 document.addEventListener('keyup', (event) => {
@@ -62,5 +63,5 @@ document.addEventListener('keyup', (event) => {
     if (event.key == 's') {
         LpadelYPosition = LpadelYPosition + LpadelSpeed
     }
-    Lpadel.style.top = `${LpadelYPositio}px`
+    Lpadel.style.top = `${LpadelYPosition}px`
 })
