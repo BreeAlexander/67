@@ -43,13 +43,14 @@ function createBall(){
     ball.style.left = `${ballXPosition}px`
 }
 
+createLpadel()
 Function createLpadel() {
     LPadel.style.height = `${LPadelHeight}px`
     LPadel.style.width = `${LPadelWidth}px`
     LPadel.style.backgroundColor = 'blue'
     LPadel.style.position = 'absolute'
     LPadel.style.left = "50px"
-    LPadel.style.height = ``
+    LPadel.style.top = `${windowHeight / 2 - LpadelHeight / 2}px`
 
 
 
