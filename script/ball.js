@@ -7,7 +7,7 @@ let LpadelHeight = 100
 const windowHeight = window.innerHeight
 const windowWidth = window.innerWidth
 
-let LpadelSpeed = 2
+let LpadelSpeed = 10
 let LpadelYPosition = windowHeight / 2 - LpadelHeight / 2
 
 const ballRadius = 30
