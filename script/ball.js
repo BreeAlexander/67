@@ -4,7 +4,7 @@ const windowHeight = window.innerHeight
 const windowWidth = window.innerWidth
 let ballXPosition = windowWidth/2 - ballRadius
 let ballYPosition = windowHeight/2 - ballRadius
-let ballSpeed = 3
+let ballSpeed = 5
 let ballXDirection = 1
 let ballYDirection = 1
 
@@ -30,7 +30,7 @@ function createBall(){
     document.body.appendChild(ball)
     ball.style.height = `${2 * ballRadius}px`
     ball.style.width = `${2 * ballRadius}px`
-    // ball.style.borderRadius = "50%"
+    ball.style.borderRadius = "50%"
     ball.style.backgroundColor = "black"
     ball.style.position = "absolute"
     ball.style.top = `${ballYPosition}px`
