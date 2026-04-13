@@ -4,6 +4,8 @@ const LPadel = document.createElement('div')
 document.body.appendChild(LPadel)
 let LpadelWidth = 20
 let LpadelHeight = 100
+let LpadelSpeed = 2
+let LpadelYPosition = windowHeight / 2 - LpadelHeight / 2
 
 const ballRadius = 30
 const windowHeight = window.innerHeight
@@ -11,7 +13,6 @@ const windowWidth = window.innerWidth
 let ballXPosition = windowWidth/2 - ballRadius
 let ballYPosition = windowHeight/2 - ballRadius
 let ballSpeed = 5
-let padelSpeed = 2
 let ballXDirection = 1
 let ballYDirection = 1
 
@@ -51,14 +52,15 @@ function createLpadel() {
     LPadel.style.backgroundColor = 'blue'
     LPadel.style.position = 'absolute'
     LPadel.style.left = "50px"
-    LPadel.style.top = `${windowHeight / 2 - LpadelHeight / 2}px`
+    LPadel.style.top = `${LpadelYPosition}px`
 }
 
 document.addEventListener('keyup', (event) => {
     if (event.key == 'w') {
-        LpadelYPosition = LpadelYPosition - LpadelYPosition
+        LpadelYPosition = LpadelYPosition - LpadelSpeed
     }
     if (event.key == 's') {
-        //move down
+        LpadelYPosition = LpadelYPosition + LpadelSpeed
     }
+    Lpadel.style.top = `${LpadelYPositio}px`
 })
