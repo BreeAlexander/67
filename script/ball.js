@@ -17,6 +17,7 @@ let ballSpeed = 5
 let ballXDirection = 1
 let ballYDirection = 1
 
+
 setInterval(moveBall, 10)
 
 function moveBall(){
@@ -30,7 +31,27 @@ function moveBall(){
     if (ballXPosition < 0 || ballXPosition > windowWidth - 2 * ballRadius) {
         ballXDirection = ballXDirection * -1
     }
+    let ballTop = ballYPosition
+    let ballBottom = ballYposition + 2 * ballRadius
+    let ballLeft = ballXPosition
+    let LpadelTop = LpadelYPosition
+    let LpadelBottom = LpadelYPosition + LpadelHeight
+    let LpadelRight = LpadelXPosition + LpadelWidth
+
+
+
+
+
+    if(
+        (ballBottom >= LpadelTop) &&
+        (balltop <= Lpadelbottom) &&
+        (ballleft <= LpadelRight) &&
+        (ballXDirection == -1)
+    ) {
+            ballXDirection = ballXDirection * -1
+        }
 }
+
 
 createBall()
 
