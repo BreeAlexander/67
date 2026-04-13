@@ -45,12 +45,14 @@ function createBall(){
 
 createLpadel()
 function createLpadel() {
-    LPadel.style.height = `${LPadelHeight}px`
-    LPadel.style.width = `${LPadelWidth}px`
+    LPadel.style.height = `${LpadelHeight}px`
+    LPadel.style.width = `${LpadelWidth}px`
     LPadel.style.backgroundColor = 'blue'
     LPadel.style.position = 'absolute'
     LPadel.style.left = "50px"
     LPadel.style.top = `${windowHeight / 2 - LpadelHeight / 2}px`
 }
 
-Lpadel.addEventListener('')
+document.addEventListener('keyup', (event) => {
+    event.key ==
+})
