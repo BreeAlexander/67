@@ -4,10 +4,12 @@ const windowHeight = window.innerHeight
 const windowWidth = window.innerWidth
 
 
+function moveBall()
 
 
-
-createBall()
+createBall(){
+    ball.style.left = 
+}
 
 function createBall(){
     document.body.appendChild(ball)
