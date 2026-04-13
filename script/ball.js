@@ -1,6 +1,6 @@
 const ball = document.createElement('div')
 document.body.appendChild(ball)
-const LPadel = document.createEleemnt('div')
+const LPadel = document.createElement('div')
 document.body.appendChild(LPadel)
 let LpadelWidth = 20
 let LpadelHeight = 100
@@ -44,15 +44,13 @@ function createBall(){
 }
 
 createLpadel()
-Function createLpadel() {
+function createLpadel() {
     LPadel.style.height = `${LPadelHeight}px`
     LPadel.style.width = `${LPadelWidth}px`
     LPadel.style.backgroundColor = 'blue'
     LPadel.style.position = 'absolute'
     LPadel.style.left = "50px"
     LPadel.style.top = `${windowHeight / 2 - LpadelHeight / 2}px`
-
-
-
-
 }
+
+Lpadel.addEventListener('')
