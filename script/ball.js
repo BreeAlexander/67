@@ -122,3 +122,13 @@ let RpadelHeight = 100
 let RpadelSpeed = 20
 let RpadelYPosition = windowHeight / 2 - RpadelHeight / 2
 let RpadelXPosition = 70
+
+createRpadel()
+function createRpadel() {
+    Rpadel.style.height = `${LpadelHeight}px`
+    Rpadel.style.width = `${LpadelWidth}px`
+    Rpadel.style.backgroundColor = 'blue'
+    Rpadel.style.position = 'absolute'
+    Rpadel.style.righh = "50px"
+    Rpadel.style.top = `${RpadelYPosition}px`
+}
