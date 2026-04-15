@@ -134,4 +134,33 @@ function createRpadel() {
     Rpadel.style.top = `${RpadelYPosition}px`
 }
 
+up = false
+down = false
+document.addEventListener('keydown', (event) => {
+    if (event.key == 'upArrow') {
+        up = true
+    }
+    if (event.key == 'downArrow') {
+        down = true
+    }
+})
+document.addEventListener('keyup', (event) => {
+    if (event.key == 'upArrow') {
+        up = false
+    }
+    if (event.key == 'downArrow') {
+        down = false
+    }
+})
+
+function moveRpadel() {
+    if (up == true && RpadelYPosition > 0) {
+        RpadelYPosition = RpadelYPosition - RpadelSpeed
+    }
+    if (down == true && RpadelYPosition < windowHeight - RpadelHeight) {
+        RpadelYPosition = RpadelYPosition + RpadelSpeed
+    }
+    Rpadel.style.top = `${RpadelYPosition}px`
+}
+
 
