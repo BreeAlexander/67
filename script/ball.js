@@ -2,6 +2,8 @@ const ball = document.createElement('div')
 document.body.appendChild(ball)
 const Lpadel = document.createElement('div')
 document.body.appendChild(Lpadel)
+const Rpadel = document.createElement('div')
+document.body.appendChild(Rpadel)
 const windowHeight = window.innerHeight
 const windowWidth = window.innerWidth
 
@@ -116,7 +118,6 @@ animate()
 
 // right side ____
 
-const Rpadel = document.createElement('div')
 let RpadelWidth = 20
 let RpadelHeight = 100
 let RpadelSpeed = 20
