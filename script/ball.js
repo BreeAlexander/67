@@ -2,18 +2,19 @@ const ball = document.createElement('div')
 document.body.appendChild(ball)
 const Lpadel = document.createElement('div')
 document.body.appendChild(Lpadel)
-let LpadelWidth = 20
-let LpadelHeight = 100
 const windowHeight = window.innerHeight
 const windowWidth = window.innerWidth
 
-let LpadelSpeed = 10
+let LpadelWidth = 20
+let LpadelHeight = 100
+let LpadelSpeed = 20
 let LpadelYPosition = windowHeight / 2 - LpadelHeight / 2
+let LpadelXPosition = 70
 
 const ballRadius = 30
 let ballXPosition = windowWidth/2 - ballRadius
 let ballYPosition = windowHeight/2 - ballRadius
-let ballSpeed = 5
+let ballSpeed = 4
 let ballXDirection = 1
 let ballYDirection = 1
 
@@ -44,14 +45,13 @@ function moveBall(){
 
     if(
         (ballBottom >= LpadelTop) &&
-        (balltop <= Lpadelbottom) &&
-        (ballleft <= LpadelRight) &&
+        (ballTop <= LpadelBottom) &&
+        (ballLeft <= LpadelRight) &&
         (ballXDirection == -1)
     ) {
             ballXDirection = ballXDirection * -1
         }
 }
-
 
 createBall()
 
@@ -76,25 +76,34 @@ function createLpadel() {
     Lpadel.style.top = `${LpadelYPosition}px`
 }
 
+wKey = false
+sKey = false
 document.addEventListener('keydown', (event) => {
     if (event.key == 'w') {
-        if (LpadelYPosition < 0) {
-            LpadelYPosition = 0
-        }
-        else {
-            LpadelYPosition = LpadelYPosition - LpadelSpeed
-        }
+        wKey = true
     }
     if (event.key == 's') {
-        if (LpadelYPosition >= windowHeight - LpadelHeight) {
-            LpadelYPosition = windowHeight - LpadelHeight
-        }
-        else {
-            LpadelYPosition = LpadelYPosition + LpadelSpeed
-        }
+        sKey = true
+    }
+})
+document.addEventListener('keyup', (event) => {
+    if (event.key == 'w') {
+        wKey = false
+    }
+    if (event.key == 's') {
+        sKey = false
+    }
+})
+
+function moveLpadel() {
+    if (wKey == true && LpadelYPosition > 0) {
+        LpadelYPosition = LpadelYPosition - LpadelSpeed
+    }
+    if (sKey == true && LpadelYPosition < windowHeight - LpadelHeight) {
+        LpadelYPosition = LpadelYPosition + LpadelSpeed
     }
     Lpadel.style.top = `${LpadelYPosition}px`
-})
+}
 
 function animate() {
     moveBall()
@@ -102,3 +111,8 @@ function animate() {
     requestAnimationFrame(animate)
 }
 animate()
+
+
+
+// right side ____
+
