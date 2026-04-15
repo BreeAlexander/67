@@ -125,8 +125,8 @@ let RpadelXPosition = 70
 
 createRpadel()
 function createRpadel() {
-    Rpadel.style.height = `${LpadelHeight}px`
-    Rpadel.style.width = `${LpadelWidth}px`
+    Rpadel.style.height = `${RpadelHeight}px`
+    Rpadel.style.width = `${RpadelWidth}px`
     Rpadel.style.backgroundColor = 'blue'
     Rpadel.style.position = 'absolute'
     Rpadel.style.righh = "50px"
