@@ -41,6 +41,10 @@ function moveBall(){
     let LpadelBottom = LpadelYPosition + LpadelHeight
     let LpadelRight = LpadelXPosition + LpadelWidth
 
+    let RpadelTop = RpadelYPosition
+    let RpadelBottom = RpadelYPosition + RpadelHeight
+    let RpadelRight = RpadelXPosition + RpadelWidth
+
 
 
 
@@ -49,6 +53,15 @@ function moveBall(){
         (ballBottom >= LpadelTop) &&
         (ballTop <= LpadelBottom) &&
         (ballLeft <= LpadelRight) &&
+        (ballXDirection == -1)
+    ) {
+            ballXDirection = ballXDirection * -1
+        }
+
+        if(
+        (ballBottom >= RpadelTop) &&
+        (ballTop <= RpadelBottom) &&
+        (ballLeft <= RpadelRight) &&
         (ballXDirection == -1)
     ) {
             ballXDirection = ballXDirection * -1
