@@ -13,6 +13,12 @@ let LpadelSpeed = 20
 let LpadelYPosition = windowHeight / 2 - LpadelHeight / 2
 let LpadelXPosition = 70
 
+let RpadelWidth = 20
+let RpadelHeight = 100
+let RpadelSpeed = 20
+let RpadelYPosition = windowHeight / 2 - RpadelHeight / 2
+let RpadelXPosition = 70
+
 const ballRadius = 30
 let ballXPosition = windowWidth/2 - ballRadius
 let ballYPosition = windowHeight/2 - ballRadius
@@ -45,10 +51,7 @@ function moveBall(){
     let RpadelBottom = RpadelYPosition + RpadelHeight
     let RpadelRight = RpadelXPosition + RpadelWidth
 
-
-
-
-
+// left side
     if(
         (ballBottom >= LpadelTop) &&
         (ballTop <= LpadelBottom) &&
@@ -57,6 +60,8 @@ function moveBall(){
     ) {
             ballXDirection = ballXDirection * -1
         }
+
+// right side
 
         if(
         (ballBottom >= RpadelTop) &&
@@ -131,11 +136,6 @@ animate()
 
 // right side ____
 
-let RpadelWidth = 20
-let RpadelHeight = 100
-let RpadelSpeed = 20
-let RpadelYPosition = windowHeight / 2 - RpadelHeight / 2
-let RpadelXPosition = 70
 
 createRpadel()
 function createRpadel() {
