@@ -116,3 +116,9 @@ animate()
 
 // right side ____
 
+const Rpadel = document.createElement('div')
+let RpadelWidth = 20
+let RpadelHeight = 100
+let RpadelSpeed = 20
+let RpadelYPosition = windowHeight / 2 - LpadelHeight / 2
+let RpadelXPosition = 70
