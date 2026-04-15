@@ -130,6 +130,8 @@ function createRpadel() {
     Rpadel.style.width = `${RpadelWidth}px`
     Rpadel.style.backgroundColor = 'blue'
     Rpadel.style.position = 'absolute'
-    Rpadel.style.righh = "50px"
+    Rpadel.style.right = "50px"
     Rpadel.style.top = `${RpadelYPosition}px`
 }
+
+
