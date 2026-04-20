@@ -40,7 +40,7 @@ body {
 
 .house2 {
     position: relative;
-    background: #DEB887;
+    background: white;
     height: 133px;
     width: 170px;
     z-index: -1;
@@ -87,7 +87,7 @@ body {
     height: 50px;
     width: 50px;
     background: #FFF8DC;
-    left: 45.5px;
+    left: 60;
     z-index: 2;
 }
 
