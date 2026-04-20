@@ -82,3 +82,11 @@ body {
     border-radius: 50%
 }
 
+.window2 {
+    position: relative;
+    height: 50px;
+    width: 50px;
+    background: #FFF8DC;
+    
+}
+
