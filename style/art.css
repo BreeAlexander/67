@@ -93,6 +93,12 @@ body {
 }
 
 .door {
-    
+    position: relative;
+    height: 100px;
+    width: 50px;
+    background: black;
+    z-index: 2;
+    top: 0px;
+    left: 75px;
 }
 
