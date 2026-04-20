@@ -1,82 +1,47 @@
 const ball = document.createElement('div')
 document.body.appendChild(ball)
-const Lpadel = document.createElement('div')
-document.body.appendChild(Lpadel)
-const Rpadel = document.createElement('div')
-document.body.appendChild(Rpadel)
+const lPadel1 = document.createElement('div')
+document.body.appendChild(lPadel1)
+const lPadel2 = document.createElement('div')
+document.body.appendChild(lPadel2)
+
+
+//Window Variables
 const windowHeight = window.innerHeight
 const windowWidth = window.innerWidth
 
-let LpadelWidth = 20
-let LpadelHeight = 100
-let LpadelSpeed = 20
-let LpadelYPosition = windowHeight / 2 - LpadelHeight / 2
-let LpadelXPosition = 70
 
-let RpadelWidth = 20
-let RpadelHeight = 100
-let RpadelSpeed = 20
-let RpadelYPosition = windowHeight / 2 - RpadelHeight / 2
-let RpadelXPosition = 70
-
-const ballRadius = 30
-let ballXPosition = windowWidth/2 - ballRadius
-let ballYPosition = windowHeight/2 - ballRadius
-let ballSpeed = 4
+//Ball Variables
+const ballRadius = 50
+let ballYPosition = (windowHeight / 2) - ballRadius
+let ballXPosition = (windowWidth / 2) - ballRadius
+let ballSpeed = 5
 let ballXDirection = 1
 let ballYDirection = 1
 
 
-setInterval(moveBall, 10)
+//Paddle Variables
+let lPadelHeight = 100
+let lPadelWidth = 20
+let lPadelSpeed = 5
+let lPadel1YPosition = (windowHeight / 2) - (lPadelHeight / 2)
+let lPadel2YPosition = (windowHeight / 2) - (lPadelHeight / 2)
+let lPadelXPosition = 70
 
-function moveBall(){
-    ballXPosition = ballXPosition + ballSpeed * ballXDirection
-    ballYPosition = ballYPosition + ballSpeed * ballYDirection
-    ball.style.left = `${ballXPosition}px`
-    ball.style.top = `${ballYPosition}px`
-    if (ballYPosition < 0 || ballYPosition > windowHeight - 2 * ballRadius) {
-        ballYDirection = ballYDirection * -1
-    }
-    if (ballXPosition < 0 || ballXPosition > windowWidth - 2 * ballRadius) {
-        ballXDirection = ballXDirection * -1
-    }
-    let ballTop = ballYPosition
-    let ballBottom = ballYPosition + 2 * ballRadius
-    let ballLeft = ballXPosition
-    let LpadelTop = LpadelYPosition
-    let LpadelBottom = LpadelYPosition + LpadelHeight
-    let LpadelRight = LpadelXPosition + LpadelWidth
 
-    let RpadelTop = RpadelYPosition
-    let RpadelBottom = RpadelYPosition + RpadelHeight
-    let RpadelRight = RpadelXPosition + RpadelWidth
+//display score
+let score1Display = document.createElement('p')
+let score1 = 0
+let score2Display = document.createElement('p')
+let score2 = 0
+document.body.appendChild(score1Display)
+document.body.appendChild(score2Display)
 
-// left side
-    if(
-        (ballBottom >= LpadelTop) &&
-        (ballTop <= LpadelBottom) &&
-        (ballLeft <= LpadelRight) &&
-        (ballXDirection == -1)
-    ) {
-            ballXDirection = ballXDirection * -1
-        }
-
-// right side
-
-        if(
-        (ballBottom >= RpadelTop) &&
-        (ballTop <= RpadelBottom) &&
-        (ballLeft <= RpadelRight) &&
-        (ballXDirection == -1)
-    ) {
-            ballXDirection = ballXDirection * -1
-        }
-}
 
 createBall()
 
-function createBall(){
-    document.body.appendChild(ball)
+
+function createBall() {
     ball.style.height = `${2 * ballRadius}px`
     ball.style.width = `${2 * ballRadius}px`
     ball.style.borderRadius = "50%"
@@ -86,94 +51,210 @@ function createBall(){
     ball.style.left = `${ballXPosition}px`
 }
 
-createLpadel()
-function createLpadel() {
-    Lpadel.style.height = `${LpadelHeight}px`
-    Lpadel.style.width = `${LpadelWidth}px`
-    Lpadel.style.backgroundColor = 'blue'
-    Lpadel.style.position = 'absolute'
-    Lpadel.style.left = "50px"
-    Lpadel.style.top = `${LpadelYPosition}px`
+
+function moveBall() {
+    // Move the ball
+    ballXPosition = ballXPosition + ballSpeed * ballXDirection
+    ballYPosition = ballYPosition + ballSpeed * ballYDirection
+
+
+    ball.style.top = `${ballYPosition}px`
+    ball.style.left = `${ballXPosition}px`
+
+
+    if (ballYPosition < 0 || ballYPosition > (windowHeight - (2 * ballRadius))) {
+        ballYDirection = ballYDirection * -1
+    }
+
+    let ballTop = ballYPosition
+    let ballBottom = ballYPosition + 2 * ballRadius
+    let ballLeft = ballXPosition
+    let ballRight = ballXPosition + 2 * ballRadius
+
+
+    //Paddle variables to hit the paddle
+    let lPadel1Top = lPadel1YPosition
+    let lPadel1Bottom = lPadel1YPosition + lPadelHeight
+    let lPadelRight = lPadelXPosition + lPadelWidth
+
+
+    let lPadel2Top = lPadel2YPosition
+    let lPadel2Bottom = lPadel2YPosition + lPadelHeight
+    let lPadel2Left = windowWidth - lPadelXPosition - lPadelWidth
+
+
+    // Then check collision
+    if (
+        ballBottom >= lPadel1Top &&
+        ballTop <= lPadel1Bottom &&
+        ballLeft <= lPadelRight &&
+        ballRight >= lPadelXPosition &&
+        ballXDirection === -1
+    ) {
+        ballXDirection *= -1
+    }
+    if (
+        ballBottom >= lPadel2Top &&
+        ballTop <= lPadel2Bottom &&
+        ballRight >= lPadel2Left &&
+        ballLeft <= lPadel2Left + lPadelWidth &&
+        ballXDirection === 1
+    ) {
+        ballXDirection *= -1
+    }
+
+
+    // Right wall player 1 scores
+    if (ballXPosition > windowWidth - (2 * ballRadius)) {
+        score1++
+        resetBall()
+    }
+    // Left wall player 2 scores
+    if (ballXPosition < 0) {
+        score2++
+        resetBall()
+    }
 }
 
-wKey = false
-sKey = false
+
+makeScoreBoard()
+//This will handle the making and updating of the scoreboard and level
+function makeScoreBoard() {
+    score1Display.innerText = "Score 1:" + score1
+    score1Display.style.position = 'absolute'
+    score1Display.style.top = "20px"
+    score1Display.style.left = "20px"
+    score1Display.style.color = "white"
+    score1Display.style.background = "black"
+
+
+    score2Display.innerText = "Score 2: " + score2
+    score2Display.style.position = 'absolute'
+    score2Display.style.color = "white"
+    score2Display.style.background = "black"
+    score2Display.style.top = "20px"
+    score2Display.style.right = "20px"
+}
+
+
+function updateScore() {
+    score1Display.innerText = "Score 1:" + score1
+    score2Display.innerText = "Score 2: " + score2
+}
+
+
+function resetBall() {
+    ballXPosition = windowWidth / 2 - ballRadius
+    ballYPosition = windowHeight / 2 - ballRadius
+    ballXDirection *= -1
+}
+
+
+// This section goes with the paddle movement
+// This is for player 2
+let iKey = false
+let kKey = false
 document.addEventListener('keydown', (event) => {
-    if (event.key == 'w') {
+    if (event.key === 'i') {
+        iKey = true
+    }
+    if (event.key === 'k') {
+        kKey = true
+    }
+})
+document.addEventListener('keyup', (event) => {
+    if (event.key === 'i') {
+        iKey = false
+    }
+    if (event.key === 'k') {
+        kKey = false
+    }
+})
+
+
+//This is for player 1
+let wKey = false
+let sKey = false
+document.addEventListener('keydown', (event) => {
+    if (event.key === 'w') {
         wKey = true
     }
-    if (event.key == 's') {
+    if (event.key === 's') {
         sKey = true
     }
 })
 document.addEventListener('keyup', (event) => {
-    if (event.key == 'w') {
+    if (event.key === 'w') {
         wKey = false
     }
-    if (event.key == 's') {
+    if (event.key === 's') {
         sKey = false
     }
 })
 
-function moveLpadel() {
-    if (wKey == true && LpadelYPosition > 0) {
-        LpadelYPosition = LpadelYPosition - LpadelSpeed
-    }
-    if (sKey == true && LpadelYPosition < windowHeight - LpadelHeight) {
-        LpadelYPosition = LpadelYPosition + LpadelSpeed
-    }
-    Lpadel.style.top = `${LpadelYPosition}px`
+
+// This creates the paddel using CSS
+createlPadel1()
+createlPadel2()
+
+
+function createlPadel1() {
+    lPadel1.style.height = `${lPadelHeight}px`
+    lPadel1.style.width = `${lPadelWidth}px`
+    lPadel1.style.backgroundColor = "teal"
+    lPadel1.style.position = 'absolute'
+    lPadel1.style.left = `${lPadelXPosition}px`
+    lPadel1.style.top = `${lPadel1YPosition}px`
 }
 
+
+function createlPadel2() {
+    lPadel2.style.height = `${lPadelHeight}px`
+    lPadel2.style.width = `${lPadelWidth}px`
+    lPadel2.style.backgroundColor = "red"
+    lPadel2.style.position = 'absolute'
+    lPadel2.style.right = `${lPadelXPosition}px`
+    lPadel2.style.top = `${lPadel2YPosition}px`
+}
+
+
+// This allows the user to control the paddle and move it up and down
+// This for player 1
+function movelPadel1() {
+    if (wKey === true && lPadel1YPosition > 0) {
+        lPadel1YPosition = lPadel1YPosition - lPadelSpeed
+    }
+    if (sKey === true && lPadel1YPosition < windowHeight - lPadelHeight) {
+        lPadel1YPosition = lPadel1YPosition + lPadelSpeed
+    }
+
+
+    lPadel1.style.top = `${lPadel1YPosition}px`
+}
+
+
+// This is for player 2
+function movelPadel2() {
+    if (iKey === true && lPadel2YPosition > 0) {
+        lPadel2YPosition = lPadel2YPosition - lPadelSpeed
+    }
+    if (kKey === true && lPadel2YPosition < windowHeight - lPadelHeight) {
+        lPadel2YPosition = lPadel2YPosition + lPadelSpeed
+    }
+
+
+    lPadel2.style.top = `${lPadel2YPosition}px`
+}
+
+
+//This replaces the interval function for a smoother feel
 function animate() {
     moveBall()
-    moveLpadel()
+    movelPadel1()
+    movelPadel2()
     requestAnimationFrame(animate)
+    updateScore()
 }
 animate()
-
-
-
-// right side ____
-
-
-createRpadel()
-function createRpadel() {
-    Rpadel.style.height = `${RpadelHeight}px`
-    Rpadel.style.width = `${RpadelWidth}px`
-    Rpadel.style.backgroundColor = 'blue'
-    Rpadel.style.position = 'absolute'
-    Rpadel.style.right = "50px"
-    Rpadel.style.top = `${RpadelYPosition}px`
-}
-
-up = false
-down = false
-document.addEventListener('keydown', (event) => {
-    if (event.key == 'upArrow') {
-        up = true
-    }
-    if (event.key == 'downArrow') {
-        down = true
-    }
-})
-document.addEventListener('keyup', (event) => {
-    if (event.key == 'upArrow') {
-        up = false
-    }
-    if (event.key == 'downArrow') {
-        down = false
-    }
-})
-
-function moveRpadel() {
-    if (up == true && RpadelYPosition > 0) {
-        RpadelYPosition = RpadelYPosition - RpadelSpeed
-    }
-    if (down == true && RpadelYPosition < windowHeight - RpadelHeight) {
-        RpadelYPosition = RpadelYPosition + RpadelSpeed
-    }
-    Rpadel.style.top = `${RpadelYPosition}px`
-}
 
 
