@@ -102,3 +102,23 @@ body {
     left: 75px;
 }
 
+.sun {
+    position: absolute;
+    background: yellow;
+    height: 300px;
+    width: 300px;
+    right: -100px;
+    top: -100px;
+    border-radius: 50%;
+}
+
+.pond {
+    position: absolute;
+    background: blue;
+    left: 200px;
+    top: 70px;
+    width: 500px;
+    height: 50px;
+    border-radius: 50%;
+    z-index: 100;
+}
