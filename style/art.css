@@ -87,6 +87,7 @@ body {
     height: 50px;
     width: 50px;
     background: #FFF8DC;
-    
+    left: 44.5px;
+    z-index: 2;
 }
 
